@@ -14,7 +14,6 @@ published: true
       <a class="blog-logo" href="{{site.url}}" style="background-image: url('{{ site.logo }}')">{{ site.title }}</a>
     {% endif %}
     <h1 class="blog-title">{{ site.title }}</h1>
-    <!-- <h2 class="blog-description"></h2> -->
     <div class="custom-links">
       {% for social in site.social %}
         {% if social.url %}
@@ -24,7 +23,6 @@ published: true
         {% endif %}
       {% endfor %}
       | &nbsp; <a href="/about/">About DSA</a> &nbsp;
-      <!-- | &nbsp; <a href="https://medium.com/ncpiedmontdsa">Blog</a> &nbsp; -->
       | &nbsp; <a href="#facebook-events">Upcoming Events</a>
     </div>
 </header>
@@ -46,7 +44,6 @@ published: true
             </section>
             <div class="post-meta">
               <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
-<!--            <span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
             </div>
           </div>
         </article>
@@ -66,9 +63,5 @@ published: true
         {% endif %}
       {% endif %}
     </nav>
-
-
-    <!-- {{!! After all the posts, we have the previous/next pagination links }}
-    {{pagination}} -->
 
 </main>
