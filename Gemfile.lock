@@ -23,7 +23,6 @@ GEM
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
-    ffi (1.9.18-x64-mingw32)
     forwardable-extended (2.6.0)
     gemoji (3.0.0)
     github-pages (133)
@@ -171,8 +170,6 @@ GEM
     net-dns (0.8.0)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
-    nokogiri (1.7.1-x64-mingw32)
-      mini_portile2 (~> 2.1.0)
     octokit (4.6.2)
       sawyer (~> 0.8.0, >= 0.5.3)
     pathutil (0.14.0)
@@ -199,7 +196,6 @@ GEM
 
 PLATFORMS
   ruby
-  x64-mingw32
 
 DEPENDENCIES
   bourbon
@@ -207,4 +203,4 @@ DEPENDENCIES
   jemoji
 
 BUNDLED WITH
-   1.14.6
+   1.14.3
