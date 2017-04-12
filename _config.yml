@@ -12,7 +12,9 @@ email: info@dsanc.org
 #blog logo
 logo: "/assets/images/DSA.png"
 # blog cover
-cover: "/assets/images/Revolution_wide.jpg"
+cover: "/assets/images/dsa_ncp_cardinal_banner.png"
+# blog closer
+closer: "/assets/images/Revolution_wide.jpg"
 
 name: "NC Piedmont DSA"
 author: "NC Piedmont DSA"
