@@ -4,66 +4,75 @@ published: true
 ---
 
 <div class="teaserimage">
-    <div class="teaserimage-image" {% if site.cover %}style="background-image: url({{ site.cover }})"{% endif %}>
+    <div class="teaserimage-image" {% if site.cover %}style="background-image: url({{ site.cover }})" {% endif %}>
         Teaser Image
     </div>
 </div>
 
-<header class="blog-header">
-    {% if site.logo %}
-      <a class="blog-logo" href="{{site.url}}" style="background-image: url('{{ site.logo }}')">{{ site.title }}</a>
-    {% endif %}
-    <h1 class="blog-title">{{ site.title }}</h1>
-    <div class="custom-links">
-      {% for social in site.social %}
-        {% if social.url %}
-            <a class="icon-{{ social.icon }}" href="{{ social.url }}" {% if social.desc %} title="{{ social.desc }}"{% endif %}">
-              <i class="fa fa-{{ social.icon }}"></i>
-          </a> &nbsp;
+<div class="container">
+    <iframe id="facebook-events" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTriangleTriadDSA%2F&tabs=events&width=340&height=448&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="300" height="600" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+    <header class="blog-header">
+        {% if site.logo %}
+        <a class="blog-logo" href="{{site.url}}" style="background-image: url('{{ site.logo }}')">{{ site.title }}</a>
         {% endif %}
-      {% endfor %}
-      | &nbsp; <a href="/about/">About DSA</a> &nbsp;
-      | &nbsp; <a href="#facebook-events">Upcoming Events</a> &nbsp;
-      | &nbsp; <a href="/newsletter">Newsletter</a> &nbsp;
-      | &nbsp; <a href="/members">Member Info</a>
-    </div>
-</header>
+        <h1 class="blog-title">{{ site.title }}</h1>
+        <div class="custom-links">
+            {% for social in site.social %}
+            {% if social.url %}
+            <a class="icon-{{ social.icon }}" href="{{ social.url }}" {% if social.desc %} title="{{ social.desc }}" {%
+               endif %}">
+            <i class="fa fa-{{ social.icon }}"></i>
+            </a> &nbsp;
+            {% endif %}
+            {% endfor %}
+            | &nbsp; <a href="/about/">About DSA</a> &nbsp;
+            | &nbsp; <a href="#facebook-events">Upcoming Events</a> &nbsp;
+            | &nbsp; <a href="/newsletter">Newsletter</a> &nbsp;
+            | &nbsp; <a href="/members">Member Info</a>
+        </div>
+    </header>
 
+    <aside> {% twitter https://twitter.com/NC_DSA maxwidth=500 limit=5 %} </aside>
 
-<main class="content" role="main">
+    <main class="content" role="main">
 
-    <h5 class="index-headline normal"><span>Latest Updates</span></h5>
+        <h5 class="index-headline normal"><span>Latest Updates</span></h5>
 
-    <div class="cf frame">
-      {% for post in paginator.posts %}
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
-          <div class="article-item">
-            <header class="post-header">
-              <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
-            </header>
-            <section class="post-excerpt" itemprop="description">
-              <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-            </section>
-            <div class="post-meta">
-              <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}</time>
-            </div>
-          </div>
-        </article>
-      {% endfor %}
-    </div>
+        <div class="cf frame">
+            {% for post in paginator.posts %}
+            <article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+                <div class="article-item">
+                    <header class="post-header">
+                        <h2 class="post-title" itemprop="name"><a href="{{ post.url }}" itemprop="url">{{ post.title
+                            }}</a></h2>
+                    </header>
+                    <section class="post-excerpt" itemprop="description">
+                        <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+                    </section>
+                    <div class="post-meta">
+                        <time datetime="{{ post.date | date_to_long_string }}">{{ post.date | date_to_long_string }}
+                        </time>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
 
-    <nav class="pagination" role="navigation">
-      {% if paginator.next_page %}
-        <a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Older posts</a>
-      {% endif %}
-      <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-      {% if paginator.previous_page %}
-        {% if paginator.page == 2 %}
-          <a class="older-posts" href="/">Newer posts &rarr;</a>
-        {% else %}
-          <a class="older-posts" href="/page{{paginator.previous_page}}">Newer posts &rarr;</a>
-        {% endif %}
-      {% endif %}
-    </nav>
+        <nav class="pagination" role="navigation">
+            <img class="responsive-image" src="/assets/images/DSA-NCP-rectangle.png" >
+            {% if paginator.next_page %}
+            <a class="newer-posts" href="/page{{paginator.next_page}}">&larr; Older posts</a>
+            {% endif %}
+            <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+            {% if paginator.previous_page %}
+            {% if paginator.page == 2 %}
+            <a class="older-posts" href="/">Newer posts &rarr;</a>
+            {% else %}
+            <a class="older-posts" href="/page{{paginator.previous_page}}">Newer posts &rarr;</a>
+            {% endif %}
+            {% endif %}
+        </nav>
 
-</main>
+    </main>
+</div>

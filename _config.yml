@@ -3,6 +3,7 @@ gems:
   - jemoji
   - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll-twitter-plugin
 
 # Site settings
 title: "NC Piedmont DSA"
