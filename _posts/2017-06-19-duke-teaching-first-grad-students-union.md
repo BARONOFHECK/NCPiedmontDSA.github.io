@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Solidarity with the Duke unions"
+title:  "NCPDSA Supports Duke Teaching First and the Duke Graduate Students Union"
 date:   2017-06-19 12:00:00
 categories:
 tags: duke gsu union
