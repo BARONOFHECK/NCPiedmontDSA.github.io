@@ -4,7 +4,7 @@ title:  "NCPDSA Supports Duke Teaching First and the Duke Graduate Students Unio
 date:   2017-06-19 12:00:00
 categories:
 tags: duke gsu union
-excerpt:  "NCP DSA stands in solidarity with Duke Teaching First and the Duke Graduate Students Union in their fight for fair wages, fair benefits, and fair working conditions."
+excerpt:  "NCPDSA stands in solidarity with Duke Teaching First and the Duke Graduate Students Union in their fight for fair wages, fair benefits, and fair working conditions."
 image:
 ---
 
